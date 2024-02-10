@@ -96,7 +96,6 @@ ${"" /* resuable code section  */}
 
 .grid-two-column {
   grid-template-columns: repeat(2, 1fr);
-
 }
 
 .grid-three-column {
@@ -167,7 +166,7 @@ input, textarea{
    @media (max-width: ${({ theme }) => theme.media.mobile}) {
        html {
       font-size: 50%;
-  }
+    }
 
 .grid{
   gap: 3.2rem;
