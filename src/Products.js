@@ -1,8 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import { useFilterContext } from "./context/filter_context";
 
 const Products = () => {
-  return <Wrapper></Wrapper>;
+
+  const {filter_products} = useFilterContext();
+
+  console.log("filter_products====",filter_products);
+  return <Wrapper>
+             
+              HHHHHHHHHHHHHH----------
+       
+        </Wrapper>;
 };
 
 const Wrapper = styled.section`
