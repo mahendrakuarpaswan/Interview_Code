@@ -8,8 +8,6 @@ const Products = () => {
 
     const {filter_products} = useFilterContext();
     
-          console.log("filter_products========>>",filter_products);
-        
   return (
     <Wrapper>
       <div className="container grid grid-filter-column">
@@ -22,7 +20,7 @@ const Products = () => {
             <Sort />
           </div>
           <div className="main-product">
-            <ProductList />
+            <ProductList   />
           </div>
         </section>
       </div>
