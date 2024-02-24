@@ -35,12 +35,12 @@ const filterReducer = (state,action) => {
     let newSortData;
     let temSortProduct = [...action.payload];
 
-    const sortingProducts = (a,b)=>{
-       
-          return a.price - b.price
-    }
-
     if(state.sorting_value === "lowest"){
+
+          const sortingProducts = (a,b)=>{
+       
+        return a.price - b.price
+  }
 
       newSortData = temSortProduct.sort(sortingProducts)
 
