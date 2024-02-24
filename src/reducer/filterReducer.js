@@ -22,7 +22,67 @@ const filterReducer = (state,action) => {
               grid_view:false
   
           }
+
+   case "GET_SORT_VALUE":
+   let userSortValue = document.getElementById("sort");
+   let sort_value = userSortValue.options[userSortValue.selectedIndex].value;
+    return{
+      ...state,
+      sorting_value:sort_value
+    }
+
+  case "SORTING_PRODUCTS":
+    let newSortData;
+    let temSortProduct = [...action.payload];
+
+    const sortingProducts = (a,b)=>{
        
+          return a.price - b.price
+    }
+
+    if(state.sorting_value === "lowest"){
+
+      newSortData = temSortProduct.sort(sortingProducts)
+
+    }
+
+
+    if(state.sorting_value === "highest"){
+
+         const sortingProducts = (a,b)=>{
+       
+         return b.price - a.price
+  }
+      newSortData = temSortProduct.sort(sortingProducts)
+
+    }
+
+
+
+  
+
+
+    if(state.sorting_value === "a-z"){
+
+       newSortData = temSortProduct.sort((a,b)=>a.name.localeCompare(b.name))
+
+    }
+
+    if(state.sorting_value === "z-a"){
+
+      newSortData = temSortProduct.sort((a,b)=>b.name.localeCompare(a.name))
+
+   }
+
+
+
+
+
+    return {
+      ...state,
+       filter_products:newSortData
+    }
+
        default :
           return state
 
