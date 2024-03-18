@@ -10,7 +10,7 @@ const Home = () => {
 
   const data = {
 
-            name:"thapa Store"
+            name:"Mahendra Store"
   }
 
   return (
